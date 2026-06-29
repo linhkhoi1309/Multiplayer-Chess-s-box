@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>package.toekneered.simplegrabcomponent</name>
+    </assembly>
+    <members>
+        <member name="P:PlayerGrab.GrabActionName">
+            <summary>
+            Input Action name for grabbing an object
+            </summary>
+        </member>
+        <member name="P:PlayerGrab.RotationActionName">
+            <summary>
+            Input Action name for rotating a held object
+            </summary>
+        </member>
+        <member name="P:PlayerGrab.TagName">
+            <summary>
+            Interact tag to search gameobjects for
+            </summary>
+        </member>
+        <member name="P:PlayerGrab.RayLength">
+            <summary>
+            Length of the ray for raycast
+            </summary>
+        </member>
+        <member name="P:PlayerGrab.RotationSpeedFactor">
+            <summary>
+            Base rotation speed factor
+            </summary>
+        </member>
+        <member name="P:PlayerGrab.MinRotationMassFactor">
+            <summary>
+            Minimum mass factor for rotating a held object
+            </summary>
+        </member>
+    </members>
+</doc>

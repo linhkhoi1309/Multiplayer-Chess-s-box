@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>package.copper.crosshairmaker</name>
+    </assembly>
+    <members>
+        <member name="M:CrosshairMaker.Animator.AnimationDictionary.AddNewAnimation(System.Int32)">
+            <summary>
+            Add an animation the same size as the others in this AnimationDictionary with given key , returns the key if sucessful
+            throws an error if AnimationDictionary is empty
+            throws an error if key is already contained in this AnimationDictionary
+            </summary>
+            <param name="key">key of animation</param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:CrosshairMaker.Animator.AnimationDictionary.AddNewAnimation">
+            <summary>
+            Add an animation the same size as the others in this AnimationDictionary in first avaliable key between 0 -> (int.MaxValue - 1) , returns the key if sucessful
+            throws an exception if AnimationDictionary is empty
+            throws an exception if all keys from 0 to (int.MaxValue - 1) are filled
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="P:CrosshairMaker.Animator.AnimationDictionary.AnimationSize">
+            <summary>
+            Returns the expected animation size based on the setters
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.AnimationValueSetter.FloatSetters">
+            <summary>
+            with CrosshairAnimation, links the floats values with the corresponding setter
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.AnimationValueSetter.IntSetters">
+            <summary>
+            with CrosshairAnimation, links the ints values with the corresponding setter
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.AnimationValueSetter.ColorSetters">
+            <summary>
+            with CrosshairAnimation, links the color values with the corresponding setter
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.CrosshairAnimation.Floats">
+            <summary>
+            target float values for animation
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.CrosshairAnimation.Ints">
+            <summary>
+            target int values for animation
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.CrosshairAnimation.Colors">
+            <summary>
+            target colors, with interpolation mode
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimation.Sizes">
+            <summary>
+            Sizes of target properties
+            </summary>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.Copy">
+            <summary>
+            Creates a copy of the animation
+            </summary>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.ToString(System.String)">
+            <summary>
+            Prints data contained in animation
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimation.Empty">
+            <summary>
+            Creates an empty animation
+            </summary>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.FromData(System.Collections.Generic.IEnumerable{System.Single},System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{Color},CrosshairMaker.Animator.ColorInterpolationMode)">
+            <summary>
+            Creates an CrosshairAnimation from lists of float, int , colors and possibly color interpolation mode
+            </summary>
+            <param name="floats">List of float in given animation</param>
+            <param name="ints">List of ints in given animation</param>
+            <param name="colors">List of Colors to</param>
+            <param name="interp">[Optional] Interpolation mode</param>
+            <returns></returns>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.FromData(System.Collections.Generic.IEnumerable{System.Single},System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{Color},System.Collections.Generic.IEnumerable{CrosshairMaker.Animator.ColorInterpolationMode})">
+            <summary>
+            Creates an CrosshairAnimation from lists of float, int , colors and possibly color interpolation modes
+            </summary>
+            <param name="floats">List of float in given animation</param>
+            <param name="ints">List of ints in given animation</param>
+            <param name="colors">List of Colors in given animation</param>
+            <param name="interps">[Optional] List of interpolation mode for colors, if this list is shorter than the colors parameter , the HSV interp mode is used by default</param>
+            <returns></returns>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.FromData(System.Collections.Generic.IEnumerable{System.Single},System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{CrosshairMaker.Animator.InterpolatableColor})">
+            <summary>
+            Creates an CrosshairAnimation from lists of float, int , colors and possibly color interpolation modes
+            </summary>
+            <param name="floats">List of float in given animation</param>
+            <param name="ints">List of ints in given animation</param>
+            <param name="colors">List of InterpolatableColor in the animation</param>
+            <returns></returns>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.FromPropertyCount(System.Int32,System.Int32,System.Int32,System.Single,System.Int32,System.Nullable{CrosshairMaker.Animator.InterpolatableColor})">
+            <summary>
+            Create CrosshairAnimation from the size of float properties, int properties and interpolableColor properties, default values can be specified
+            </summary>
+            <param name="floatCount">number of float properties</param>
+            <param name="intCount">number of int properties</param>
+            <param name="colorCount">number of interpolableColor properties</param>
+            <param name="defaultF">[Optional] default value of float properties</param>
+            <param name="defaultI">[Optional] default value of int properties</param>
+            <param name="defaultC">[Optional] default value of interpolableColor properties</param>
+            <returns></returns>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimation.FromPropertyCount(System.Int32[],System.Single,System.Int32,System.Nullable{CrosshairMaker.Animator.InterpolatableColor})">
+            <summary>
+            Create CrosshairAnimation from the size of float properties, int properties and interpolableColor properties, default values can be specified
+            </summary>
+            <param name="propCount">Array containing the count of each properties like so : [float,int,InterpolatableColor]</param>
+            <param name="defaultF">[Optional] default value of float properties</param>
+            <param name="defaultI">[Optional] default value of int properties</param>
+            <param name="defaultC">[Optional] default value of interpolableColor properties</param>
+            <returns></returns>
+        </member>
+        <member name="E:CrosshairMaker.Animator.CrosshairAnimator.OnAnimationStarting">
+            <summary>
+            Event fired when animation starts
+            </summary>
+        </member>
+        <member name="E:CrosshairMaker.Animator.CrosshairAnimator.OnAnimationEnd">
+            <summary>
+            Event fired when animation ends
+            </summary>
+        </member>
+        <member name="E:CrosshairMaker.Animator.CrosshairAnimator.OnAnimationReseting">
+            <summary>
+            Event fired when animation starts to reset (when ResetAnimation is called)
+            </summary>
+        </member>
+        <member name="E:CrosshairMaker.Animator.CrosshairAnimator.OnAnimationReset">
+            <summary>
+            Event fired when animation is done reseting
+            </summary>
+        </member>
+        <member name="E:CrosshairMaker.Animator.CrosshairAnimator.OnAnimationInterupted">
+            <summary>
+            Event fired when animation or PlaybackSpeed is changed before completing, the old Progress will still be used to complete the new animation
+            </summary>
+        </member>
+        <member name="E:CrosshairMaker.Animator.CrosshairAnimator.OnAnimationCancelled">
+            <summary>
+            Event fired when the animation is interrupted and both Progress and Playbackspeed are reset
+            </summary>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimator.ScanForCrosshair">
+            <summary>
+            Scans the current GameObject for a IAnimatableCrosshair component
+            </summary>
+        </member>
+        <member name="M:CrosshairMaker.Animator.CrosshairAnimator.AddAnimation">
+            <summary>
+            Adds a new configurable animation to the crosshair
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.AnimationIndex">
+            <summary>
+            Current animation Index
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.Progress">
+            <summary>
+            Animation progress from 0 to 1
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.ProgressMultiplier">
+            <summary>
+            Sets the progress multiplier to change the animation amplitude, default is 1
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.Easing">
+            <summary>
+            Easing of animation, used to calculate Progress
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.CrosshairAnimator.AnimationDuration">
+            <summary>
+            Duration in seconds for progress to go from 0 to 1 when PlayAnimation is called
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.CrosshairAnimator.AnimationWait">
+            <summary>
+            Duration in seconds for the between the end of the animation and calling ResetAnimation, if set to -1 ResetAnimation is never called automatically
+            </summary>
+        </member>
+        <member name="F:CrosshairMaker.Animator.CrosshairAnimator.AnimationResetDuration">
+            <summary>
+            Duration in seconds for progress to go from 1 to 0 when ResetAnimation is called
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.PlaybackSpeed">
+            <summary>
+            Current playback speed
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.Target">
+            <summary>
+            The crosshair animated by this component
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.CurrentCrosshair">
+            <summary>
+            Target as string
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator.CurrentCrosshairID">
+            <summary>
+            Target id
+            </summary>
+        </member>
+        <member name="P:CrosshairMaker.Animator.CrosshairAnimator._AnimationDataStr">
+            <summary>
+            AnimationDictionary
+            </summary>
+        </member>
+    </members>
+</doc>
