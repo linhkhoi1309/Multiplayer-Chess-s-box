@@ -397,7 +397,7 @@
           "Name": "collider",
           "Position": "0,0,0.635003805",
           "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
+          "Scale": "0.552000046,0.552000165,1",
           "Tags": "",
           "Enabled": true,
           "NetworkMode": 2,
@@ -558,9 +558,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -685,9 +685,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -812,9 +812,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -939,9 +939,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1066,9 +1066,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1193,9 +1193,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1320,9 +1320,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1447,9 +1447,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1574,9 +1574,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1701,9 +1701,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1828,9 +1828,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -1955,9 +1955,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2082,9 +2082,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2209,9 +2209,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2336,9 +2336,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2463,9 +2463,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2590,9 +2590,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2717,9 +2717,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2844,9 +2844,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -2971,9 +2971,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3098,9 +3098,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3225,9 +3225,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3352,9 +3352,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3479,9 +3479,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3606,9 +3606,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3733,9 +3733,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3860,9 +3860,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -3987,9 +3987,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -4114,9 +4114,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -4241,9 +4241,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -4368,9 +4368,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -4495,9 +4495,9 @@
                     "X": false,
                     "Y": false,
                     "Z": false,
-                    "Pitch": false,
+                    "Pitch": true,
                     "Yaw": false,
-                    "Roll": false
+                    "Roll": true
                   },
                   "MassCenterOverride": "0,0,0",
                   "MassOverride": 0,
@@ -4601,6 +4601,39 @@
       "NetworkTransmit": true,
       "OwnerTransfer": 1,
       "Components": [],
+      "Children": []
+    },
+    {
+      "__guid": "e4525d1b-42da-42cb-b5a1-30df7525a488",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "BackgroundMusicPlayer",
+      "Position": "8.12298965,-174.894424,-146.215775",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "MultiplayerChess.BackgroundMusicPlayer",
+          "__guid": "85c04b1a-d783-4e51-85f0-15e5440713e0",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Track": "audio/music/bg_music.sound",
+          "Volume": 0.25
+        }
+      ],
       "Children": []
     }
   ],
