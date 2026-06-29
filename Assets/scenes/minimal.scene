@@ -350,7 +350,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "NetworkManager",
-      "Position": "143.725311,-39.0068092,16.2572403",
+      "Position": "0,0,0",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -362,8 +362,8 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.NetworkHelper",
-          "__guid": "90b0d510-ef9d-45c3-8f63-247134bc528f",
+          "__type": "Sandbox.UniqueNetworkHelper",
+          "__guid": "69b3da18-1c8b-4c84-ab15-6595547fce38",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -415,7 +415,7 @@
       "Flags": 0,
       "Name": "SpawnPoint2",
       "Position": "0,-20,0",
-      "Rotation": "-0,0,-1,-4.37113883E-08",
+      "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
