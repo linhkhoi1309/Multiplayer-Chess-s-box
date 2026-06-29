@@ -4,12 +4,20 @@ public sealed class BackgroundMusicPlayer : Component
 {
 	[Property] public SoundEvent Track { get; set; }
 	[Property, Range( 0f, 1f )] public float Volume { get; set; } = 0.5f;
+	[Property] public bool Loop { get; set; } = true;
 
 	private SoundHandle _handle;
 
 	protected override void OnStart()
 	{
 		Play();
+	}
+
+	protected override void OnUpdate()
+	{
+		// restart once the track finishes.
+		if ( Loop && _handle is not null && _handle.Finished )
+			Play();
 	}
 
 	protected override void OnEnabled()
@@ -34,6 +42,7 @@ public sealed class BackgroundMusicPlayer : Component
 		if ( Track is null )
 			return;
 
+		_handle?.Stop();
 		_handle = Sound.Play( Track );
 
 		if ( _handle is not null )
