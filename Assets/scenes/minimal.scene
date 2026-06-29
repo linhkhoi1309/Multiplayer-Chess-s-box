@@ -346,11 +346,11 @@
       "Children": []
     },
     {
-      "__guid": "90002c99-58c6-4cec-bcb6-f16a4d005b3c",
+      "__guid": "c6bc97c9-a540-49a5-944c-7fa7920801a9",
       "__version": 2,
       "Flags": 0,
-      "Name": "chessboard",
-      "Position": "0,0,45",
+      "Name": "NetworkManager",
+      "Position": "143.725311,-39.0068092,16.2572403",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -362,43 +362,131 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "b810904b-08aa-4336-bfd0-04ec72629fb1",
+          "__type": "Sandbox.NetworkHelper",
+          "__guid": "90b0d510-ef9d-45c3-8f63-247134bc528f",
           "__enabled": true,
           "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Materials": null,
-          "Model": "chessboard.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player1.prefab"
           },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "2cf616d1-a3ad-4417-ad78-3b7c4e14ae40"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e0ff24a1-73f8-4683-a7dc-a2a42a895b2d"
+            }
+          ],
+          "StartServer": true
         }
       ],
+      "Children": []
+    },
+    {
+      "__guid": "2cf616d1-a3ad-4417-ad78-3b7c4e14ae40",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "SpawnPoint1",
+      "Position": "0,20,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
+    },
+    {
+      "__guid": "e0ff24a1-73f8-4683-a7dc-a2a42a895b2d",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "SpawnPoint2",
+      "Position": "0,-20,0",
+      "Rotation": "-0,0,-1,-4.37113883E-08",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
+    },
+    {
+      "__guid": "e4525d1b-42da-42cb-b5a1-30df7525a488",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "BackgroundMusicPlayer",
+      "Position": "8.12298965,-174.894424,-146.215775",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "MultiplayerChess.BackgroundMusicPlayer",
+          "__guid": "85c04b1a-d783-4e51-85f0-15e5440713e0",
+          "__enabled": true,
+          "Flags": 0,
+          "Loop": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Track": "audio/music/bg_music.sound",
+          "Volume": 0.25
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "50df0a08-6870-4ebe-8c2a-b621d27b0ddc",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "chess",
+      "Position": "0,0,45",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": [
         {
-          "__guid": "3dedba5f-6ee0-40c9-9966-67d8e45562fd",
+          "__guid": "90002c99-58c6-4cec-bcb6-f16a4d005b3c",
           "__version": 2,
           "Flags": 0,
-          "Name": "collider",
-          "Position": "0,0,0.635003805",
+          "Name": "chessboard",
+          "Position": "0,0,0",
           "Rotation": "0,0,0,1",
-          "Scale": "0.552000046,0.552000165,1",
-          "Tags": "",
+          "Scale": "1,1,1",
+          "Tags": "board",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkFlags": 0,
@@ -407,34 +495,81 @@
           "OwnerTransfer": 1,
           "Components": [
             {
-              "__type": "Sandbox.PlaneCollider",
-              "__guid": "398c3602-530d-4c91-8fe7-40e2e102c78c",
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "b810904b-08aa-4336-bfd0-04ec72629fb1",
               "__enabled": true,
               "Flags": 0,
-              "Center": "0,0,0",
-              "ColliderFlags": 0,
-              "Elasticity": null,
-              "Friction": null,
-              "IsTrigger": false,
-              "Normal": "0,0,1",
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Materials": null,
+              "Model": "chessboard.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "RollingResistance": null,
-              "Scale": "50,50",
-              "Static": true,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
             }
           ],
-          "Children": []
+          "Children": [
+            {
+              "__guid": "3dedba5f-6ee0-40c9-9966-67d8e45562fd",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "collider",
+              "Position": "0,0,0.635003805",
+              "Rotation": "0,0,0,1",
+              "Scale": "0.552000046,0.552000165,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.PlaneCollider",
+                  "__guid": "398c3602-530d-4c91-8fe7-40e2e102c78c",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "Center": "0,0,0",
+                  "ColliderFlags": 0,
+                  "Elasticity": null,
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "Normal": "0,0,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "RollingResistance": null,
+                  "Scale": "50,50",
+                  "Static": true,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            }
+          ]
         },
         {
           "__guid": "6db66b0b-4036-485d-9748-bbee3501480d",
@@ -576,6 +711,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "a71b0537-1402-474c-9190-145d6c50c5fe",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -703,6 +855,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "3b7a4b0d-24be-41c9-a80d-689b7b3d7306",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -830,6 +999,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "efc3ac72-db4b-4726-b17f-fd28460c4686",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -957,6 +1143,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "06141b8a-02fe-4634-afc3-0d9c93c6ce22",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1084,6 +1287,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "e6253f37-58d6-450c-b1ec-44a123e5d104",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1211,6 +1431,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "c0a254fa-13fe-4a9f-a3d6-3e8c707f2030",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1338,6 +1575,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "0afbcf94-bf29-4582-93af-5e2af4cfff3e",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1465,6 +1719,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "5873ecda-d815-46e9-8d33-328cf7b1413b",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1592,6 +1863,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "4951ce65-9432-4e1a-81d0-62bbf74f7502",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1719,6 +2007,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "22404b1c-79bf-4d85-b319-a0e700dc395b",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1846,6 +2151,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "5b849975-efcb-4f50-b471-6d4e8d7ebfb2",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -1973,6 +2295,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "75140615-1427-47da-a0a7-b22280c2a40b",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2100,6 +2439,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "6e42f0e6-b4fd-49d9-8f03-48081daf22fe",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2227,6 +2583,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "dc4cde9b-f83d-4bd5-88f9-ab926ca945b3",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2354,6 +2727,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "f29592ac-b145-4092-9b14-06844f7578d6",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2481,6 +2871,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "5b508a88-4082-46d8-a484-743bc9d3c840",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2608,6 +3015,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "17077aed-793a-4979-88e8-b589fca36755",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2735,6 +3159,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "7e64e83b-dc95-493c-a844-fd68b65596fb",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2862,6 +3303,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "bedb7fce-3acf-425d-8226-82a55bfac031",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -2989,6 +3447,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "86216100-42db-47dd-9afe-b3f1a381be8c",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3116,6 +3591,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "d6d618ad-3821-4f5b-a2e7-736a838458cd",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3243,6 +3735,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "de856838-f102-4544-b6bb-3e276154fc93",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3370,6 +3879,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "a0534139-9872-4dc3-971a-7aa652b7e53a",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3497,6 +4023,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "78a534cb-788b-4ec4-8a82-e9d54f218691",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3624,6 +4167,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "ab5e0c66-0fd1-42d9-b24b-a6b98f9bff26",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3751,6 +4311,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "01fa3197-b0cb-4045-bcd9-a6f1ff709d37",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -3878,6 +4455,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "fd519e97-2646-47fe-80b6-10075676a424",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -4005,6 +4599,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "4e79fab3-732d-4ca6-b35c-a96e5ebad022",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -4132,6 +4743,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "e6481769-6a3a-49a3-af3e-575e36bbd071",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -4259,6 +4887,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "875ae3d2-cb06-45be-96cb-62ba9a7f1650",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -4386,6 +5031,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "6f223b03-bdb7-4fb1-81d6-0bca74cbf4f2",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -4513,6 +5175,23 @@
                   "RigidbodyFlags": 0,
                   "SleepThreshold": 2,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "MultiplayerChess.PieceSFX",
+                  "__guid": "85a891a8-a3eb-41c8-96db-59ca1756a491",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BoardTag": "board",
+                  "Cooldown": 0.1,
+                  "MinImpactSpeed": 1,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "PlaceSound": "audio/sfx/piece_place_sfx.sound",
+                  "Volume": 1
                 }
               ],
               "Children": []
@@ -4522,13 +5201,13 @@
       ]
     },
     {
-      "__guid": "c6bc97c9-a540-49a5-944c-7fa7920801a9",
+      "__guid": "795cd794-b689-4a6f-b2e9-0c5f4ea65da4",
       "__version": 2,
       "Flags": 0,
-      "Name": "NetworkManager",
-      "Position": "143.725311,-39.0068092,16.2572403",
+      "Name": "table",
+      "Position": "0,0,0",
       "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
+      "Scale": "0.5,0.5,1.28800094",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -4538,100 +5217,112 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.NetworkHelper",
-          "__guid": "90b0d510-ef9d-45c3-8f63-247134bc528f",
+          "__type": "Sandbox.Prop",
+          "__guid": "607d6eb2-e5d3-4e87-9424-b34a69742cea",
           "__enabled": true,
           "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/table.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "PlayerPrefab": {
-            "_type": "gameobject",
-            "prefab": "prefabs/player1.prefab"
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "7f01b19d-6186-45b2-a4fc-6ed2f538b203",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/table.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
           },
-          "SpawnPoints": [
-            {
-              "_type": "gameobject",
-              "go": "2cf616d1-a3ad-4417-ad78-3b7c4e14ae40"
-            },
-            {
-              "_type": "gameobject",
-              "go": "e0ff24a1-73f8-4683-a7dc-a2a42a895b2d"
-            }
-          ],
-          "StartServer": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "2cf616d1-a3ad-4417-ad78-3b7c4e14ae40",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "SpawnPoint1",
-      "Position": "0,20,0",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [],
-      "Children": []
-    },
-    {
-      "__guid": "e0ff24a1-73f8-4683-a7dc-a2a42a895b2d",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "SpawnPoint2",
-      "Position": "0,-20,0",
-      "Rotation": "-0,0,-1,-4.37113883E-08",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [],
-      "Children": []
-    },
-    {
-      "__guid": "e4525d1b-42da-42cb-b5a1-30df7525a488",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "BackgroundMusicPlayer",
-      "Position": "8.12298965,-174.894424,-146.215775",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
         {
-          "__type": "MultiplayerChess.BackgroundMusicPlayer",
-          "__guid": "85c04b1a-d783-4e51-85f0-15e5440713e0",
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "965219b6-de69-4124-94b4-0315af3054f3",
           "__enabled": true,
           "Flags": 0,
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/table.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Track": "audio/music/bg_music.sound",
-          "Volume": 0.25
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "b414a56b-d03b-4143-89c1-68ee077fb6df",
+          "__enabled": true,
+          "Flags": 0,
+          "AngularDamping": 0,
+          "EnableImpactDamage": true,
+          "EnhancedCcd": false,
+          "Gravity": true,
+          "GravityScale": 1,
+          "ImpactDamage": 0,
+          "LinearDamping": 0,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MinImpactDamageSpeed": 500,
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "SleepThreshold": 2,
+          "StartAsleep": false
         }
       ],
       "Children": []
@@ -4688,7 +5379,8 @@
     "arcaneprops.chessrookblack#142776",
     "arcaneprops.chessrookwhite#142782",
     "facepunch.floor_grass_dirt_blend_a#292974",
-    "fluffybagel.chessboard#20036"
+    "fluffybagel.chessboard#20036",
+    "hecker.table#34145"
   ],
   "__version": 3
 }
